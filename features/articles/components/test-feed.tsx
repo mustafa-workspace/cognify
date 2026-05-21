@@ -1,11 +1,12 @@
 "use client"; 
 import { useEffect } from "react"; 
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
+import { Bookmark, Eraser } from "lucide-react";
 import { getRelativeTime } from "@/lib/date";
 import { Button } from "@/components/ui/button";
 import HighlightFeed from "@/features/highlight/components/highlight-feed";
 import useFeedStore from "@/store/FeedStore"; 
+import Dots from "@/components/shared/loading/loading";
 
 export const Feed = () => {
     
@@ -15,7 +16,7 @@ export const Feed = () => {
         fetchFeeds();
     }, [fetchFeeds]);
 
-    if (loading) return <div>Loading....</div>;
+    if (loading) return <Dots />;
     if (error) return <div>Wating.... {error} ❌</div>;
 
     return (
@@ -30,6 +31,7 @@ export const Feed = () => {
                                 width={500}
                                 height={500}
                                 unoptimized
+                                loading="eager"
                             />
                         </div>
                         <div className="content-user">
