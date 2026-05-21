@@ -11,8 +11,16 @@ const nextConfig = {
         port: '1337',
         pathname: '/uploads/**',
       },
+       {
+        protocol: 'http',
+        hostname: '127.0.0.1.1',
+        port: '1337',
+        pathname: '/uploads/**',
+      }
     ],
+        dangerouslyAllowSVG: false,
+
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
