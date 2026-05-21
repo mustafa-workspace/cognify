@@ -1,5 +1,4 @@
 import {create} from 'zustand';
-import {persist} from 'zustand/middleware';
 import getFeeds from '@/features/articles/services/get-feeds';
 
 interface FeedState {

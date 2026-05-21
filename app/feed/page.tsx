@@ -1,4 +1,4 @@
-import { Feed } from "@/features/articles/components/test-feed";
+import { Feed } from "@/features/articles/components/Feeds";
 export default function FeedPage() {
     return (
         <Feed />
