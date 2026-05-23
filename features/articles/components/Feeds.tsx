@@ -1,9 +1,9 @@
 "use client"; 
 import { useEffect } from "react"; 
 import Image from "next/image";
-import { Bookmark, Eraser } from "lucide-react";
+import { Bookmark } from "lucide-react";
 import { getRelativeTime } from "@/lib/date";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import HighlightFeed from "@/features/highlight/components/highlight-feed";
 import useFeedStore from "@/store/FeedStore"; 
 import Dots from "@/components/shared/loading/loading";
@@ -20,31 +20,31 @@ export const Feed = () => {
     if (error) return <div>Wating.... {error} ❌</div>;
 
     return (
-        <div className="card">
+        <div className="card card-feed-container p-4 mb-4">
             {items?.map((feed: any) => (
-                <div key={feed.id}>
-                    <div className="userinfo">
+                <div className="feed-item p-3" key={feed.id}>
+                    <div className="userinfo flex items-center gap-3 mb-2 bg-white">
                         <div className="user-avatar">
                             <Image
                                 src={'http://localhost:1337' + feed?.userinfo?.avatarImg?.url}
                                 alt={'the image profile'}
-                                width={500}
-                                height={500}
+                                width={40}
+                                height={40}
                                 unoptimized
                                 loading="eager"
                             />
                         </div>
                         <div className="content-user">
                             <h2 className="username">{feed.userinfo.username}</h2>
-                            <div className="info-user">
-                                <div className="inbox">
+                            <div className="info-user flex items-center gap-2 text-sm text-gray-500">
+                                <div className="inbox ">
                                     <span>{feed.userinfo.userTitle}</span>
                                     <span>.</span>
                                     <span>{getRelativeTime(feed.publishedAt)}</span>
                                 </div>
-                                <Button className="cursor-pointer bg-transparent hover:bg-transparent border-black rounded-full">
+                                <div className="cursor-pointer">
                                     <span className="Bookmark-icon"><Bookmark className="text-black" /></span>
-                                </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
