@@ -1,10 +1,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@tailwind base;
+/* @tailwind base; */
 
 @custom-variant dark (&:is(.dark *));
-@tailwind components;
+@tailwind utilities;
 @tailwind utilities;
 
 @theme inline {
@@ -51,7 +51,7 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
+    --background: #F6F6F6;
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
@@ -130,3 +130,6 @@
     @apply font-sans;
     }
 }
+
+
+/* Global Styles */

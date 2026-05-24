@@ -13,3 +13,8 @@ type Article = {
         name: string;
     }[];
 };
+
+interface ParamsArticlePage {
+  slug: string;
+  id: number;
+}
