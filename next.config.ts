@@ -18,12 +18,10 @@ const nextConfig = {
         pathname: '/uploads/**',
       }
     ],
-        dangerouslyAllowSVG: false,
+        // dangerouslyAllowSVG: false,
 
   },
-  experimental: {
-    allowedDevOrigins: ['http://localhost:1337'],
-  },
+ 
 }
 
 export default nextConfig
