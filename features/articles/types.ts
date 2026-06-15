@@ -15,6 +15,6 @@ type Article = {
 };
 
 interface ParamsArticlePage {
-  slug: string;
-  id: number;
+    slug: string;
+    id: number;
 }
