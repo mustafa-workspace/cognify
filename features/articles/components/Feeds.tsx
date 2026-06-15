@@ -1,11 +1,12 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
+import { Bookmark, Sparkles } from "lucide-react";
 import { getRelativeTime } from "@/lib/date";
 import HighlightFeed from "@/features/highlight/components/highlight-feed";
 import useFeedStore from "@/store/FeedStore";
 import Link from "next/link";
+import { FeedsDropDown } from "./FeedsDrop";
 import Dots from "@/components/shared/loading/loading";
 
 export const Feed = () => {
@@ -19,7 +20,7 @@ export const Feed = () => {
     if (error) return <div>Wating.... {error} ❌</div>;
 
     return (
-        <div className="w-auto max-w-2xl mx-auto px-4 py-6 inline-block">
+        <div className="lg:max-w-2xl w-full max-sm:w-full mx-auto px-4 py-6  ">
             {items?.map((feed: any) => (
                 <div
                     key={feed.id}
@@ -55,13 +56,13 @@ export const Feed = () => {
                         </div>
 
                         {/* Bookmark Action */}
-                        <button className="p-2.5 text-slate-400 hover:text-slate-800 transition-colors border border-gray-100 rounded-full bg-slate-50/50 hover:bg-slate-50">
-                            <Bookmark className="w-[18px] h-[18px]" strokeWidth={1.8} />
+                        <button className=" text-slate-400 hover:text-slate-800 transition-colors border border-gray-100 rounded-full bg-slate-50/50 hover:bg-slate-50">
+                            <FeedsDropDown />
                         </button>
                     </div>
 
                     {/* Feed Title */}
-                    <h1 className="text-2xl md:text-[28px] font-bold text-slate-800 tracking-tight leading-[1.25] mb-4">
+                    <h1 className="text-2xl font-lora md:text-[28px] font-bold text-header cursor-pointer hover:text-header-hover ease-in-out duration-300 tracking-tight leading-[1.6] mb-4 ">
                         {feed.title}
                     </h1>
 
@@ -71,8 +72,7 @@ export const Feed = () => {
                             {feed.tags.map((tag: any) => (
                                 <span
                                     key={tag.id}
-                                    className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-slate-50 text-slate-500 border border-slate-100/50"
-                                /* Tip: If your API provides custom tag colors, you can map them here */
+                                    className="px-3 py-1 text-[11px] font-bold uppercase cursor-pointer hover:text-[#3741517e] ease-in-out duration-300 tracking-wider rounded-md bg-slate-50 text-slate-500 border border-slate-100/50"
                                 >
                                     {tag?.titleTag}
                                 </span>
@@ -88,15 +88,15 @@ export const Feed = () => {
                     {/* Footer Action Bar */}
                     <div className="flex items-center justify-between border-t border-gray-50 pt-5 mt-2">
                         {/* Left Action (e.g., Highlights Counter) */}
-                        <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                            <HighlightFeed id={feed.id} />
+                        <div className="text-xs flex items-center gap-2 font-bold uppercase tracking-widest text-slate-400">
+                            <Sparkles className="w-[18px] h-[18px]" strokeWidth={1.8} /> <HighlightFeed id={feed.id} />
                         </div>
 
                         {/* Right Action (Read Link) */}
                         <div>
                             <Link
                                 href={`/article/${feed.slug}/${feed.documentId}`}
-                                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 hover:text-blue-700 transition-colors group"
+                                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-links hover:text-links-hover transition-colors group"
                             >
                                 Read Insight
 

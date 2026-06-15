@@ -5,3 +5,19 @@
 body {
     background-color: #f6f6f6 !important;
 }
+
+@theme {
+    --font-lora: var(--font-lora), serif;
+    --font-inter: var(--font-inter);
+
+    /* colors headers */
+    --color-header: #374151;
+    --color-header-hover: #374151bb;
+    --color-links: #4A90E2;
+    --color-links-hover: #4A90E2bb;
+}
+
+:root {
+    --color-black: #00000000 !important;
+
+}

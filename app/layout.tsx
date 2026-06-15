@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "@/styles/globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   display: "swap",
   subsets: ["latin"],
+});
+
+const lora = Lora({
+  variable: "--font-lora",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["500"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} h-full antialiased`}
+      className={`${inter.className} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-100">{children}</body>
     </html>
