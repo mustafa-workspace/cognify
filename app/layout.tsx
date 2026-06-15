@@ -6,7 +6,6 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
   subsets: ["latin"],
-  // weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +23,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-gray-100">{children}</body>
     </html>
   );
 }
+
+
