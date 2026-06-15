@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
+import Navbar from "@/components/layout/navbarMobile";
+import NavbarDesk from "@/components/layout/navbar";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -30,7 +32,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.className} ${lora.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-gray-100">{children}</body>
+      <body className="min-h-full flex flex-col bg-gray-100">
+        <Navbar />
+        <NavbarDesk />
+        {children}</body>
     </html>
   );
 }
