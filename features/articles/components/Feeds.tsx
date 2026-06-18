@@ -20,7 +20,8 @@ export const Feed = () => {
     if (error) return <div>Wating.... {error} ❌</div>;
 
     return (
-        <div className="lg:max-w-2xl w-full max-sm:w-full mx-auto px-4 py-6  ">
+        // <div className="lg:max-w-2xl w-full max-sm:w-full mx-auto px-4 py-6  ">
+        <div className="lg:w-full py-6 px-4">
             {items?.map((feed: any) => (
                 <div
                     key={feed.id}

@@ -16,6 +16,17 @@ body {
     --color-links: #4A90E2;
     --color-links-hover: #4A90E2bb;
     --color-icons: #9ca3af;
+
+    /* sidebar */
+    --color-sidebar-cover: #BFDEE0;
+    --color-sidebar-cover2: #A8EAF0;
+    --color-sidebar-cover3: #9BB5B9;
+    /* size sidebar */
+    --text-size-username: 18px;
+    --text-size-location: 12px;
+    --text-size-title: 11px;
+    --text-size-description: 11px;
+   
 }
 
 :root {

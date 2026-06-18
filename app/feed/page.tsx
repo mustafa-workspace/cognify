@@ -1,4 +1,4 @@
-import Sidebar from "@/components/layout/sidebar";
+import Sidebar from "@/components/layout/sidebarFeed";
 import RightSidebar from "@/components/layout/RightSidebar";
 import { Feed } from "@/features/articles/components/Feeds";
 export default function FeedPage() {

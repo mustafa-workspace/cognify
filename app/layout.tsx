@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/navbarMobile";
 import NavbarDesk from "@/components/layout/navbar";
 import "@/styles/globals.css";
@@ -10,12 +10,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const lora = Lora({
-  variable: "--font-lora",
-  display: "swap",
-  subsets: ["latin"],
-  weight: ["500"],
-});
+// const lora = Lora({
+//   variable: "--font-lora",
+//   display: "swap",
+//   subsets: ["latin"],
+//   weight: ["500"],
+// });
 
 export const metadata: Metadata = {
   title: "Cognify",
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} ${lora.variable} h-full antialiased`}
+      className={`${inter.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-100">
         <Navbar />

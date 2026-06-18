@@ -29,7 +29,7 @@ export default function NavbarDesk() {
                     </div>
                     <div className='user-profile ml-2 cursor-pointer'>
                         <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-200 flex items-center justify-center bg-slate-100 relative">
-                            <Image src="/images/user/avatar/user.png" alt="Avatar" fill className="object-cover" />
+                            <Image src="/images/user/avatar/user.png" alt="Avatar" width={55} height={55} className="object-cover" />
                         </div>
                     </div>
                 </div>
