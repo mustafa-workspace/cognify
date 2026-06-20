@@ -1,15 +1,15 @@
 import Image from "next/image"
 export default function FeedProfile() {
     return (
-        <div className="feed-profile w-full bg-white rounded-4xl py-6 px-4 relative h-102.5 sm:h-100">
+        <div className="feed-profile w-full bg-white rounded-4xl relative lx:h-102.5 lg:h-90 sm:h-75 h-102.5">
             {/* User Avatar */}
-            <div className="overlay-cover bg-linear-to-bl from-sidebar-cover via-sidebar-cover2 to-sidebar-cover3 w-full h-37.5 sm:h-30 lg:h-33.75 absolute top-0 left-0 rounded-[25px]">
+            <div className="overlay-cover bg-linear-to-bl from-sidebar-cover via-sidebar-cover2 to-sidebar-cover3 w-full  h-37.5 sm:h-19 lg:h-33.75 absolute top-0 left-0 rounded-[25px]">
                 <div className="feed-profile-avatar overflow-hidden w-21.25 h-21.25 rounded-full border-4 border-white absolute -bottom-7.5 left-6">
-                    <Image src="/images/user/avatar/user.jpg" alt="Avatar" width={85} height={85} className="w-full h-full object-cover" />
+                    <Image src="/images/user/avatar/user.jpg" alt="Avatar" width={85} height={85} className="lg  w-full h-full object-cover" />
                 </div>
             </div>
             {/* User Information */}
-            <div className="feed-profile-info absolute bottom-10 left-0 right-0 px-6 pb-3 ">
+            <div className="feed-profile-info absolute bottom-3 left-0 right-0 px-6 pb-3 ">
                 <div className="user-info px-2 ">
                     <div className="text-header flex justify-between items-center">
                         <span className="user-name xl:text-size-username lg:text-[16px] text-[14px] font-bold">Betsy Turner</span>
