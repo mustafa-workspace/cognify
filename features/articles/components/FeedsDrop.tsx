@@ -13,9 +13,9 @@ export function FeedsDropDown() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger>
-                <Button variant="ghost" size="icon" className="cursor-pointer">
+                <div variant="ghost" size="icon" className="cursor-pointer">
                     <Bookmark className="w-[20px] h-[20px] text-slate-600" strokeWidth={1.8} />
-                </Button>
+                </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
                 className="w-[280px] bg-white p-3.5 rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100 flex flex-col gap-3.5 font-sans"

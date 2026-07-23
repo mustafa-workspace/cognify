@@ -8,7 +8,7 @@ export default function NavbarDesk() {
             <div className='content-navs flex justify-between items-center w-full px-3'>
                 <div className='nav-left flex items-center gap-3'>
                     <div className='brand-name'>
-                        <span className='text-xl font-bold text-links tracking-tight'>Cognify</span>
+                        <span className='text-xl font-bold  text-links tracking-tight'>Cognify</span>
                     </div>
                     <div className='search-bar'>
                         <input type="text" placeholder="Search,auother,tags..." className='w-[300px] bg-slate-200/50 rounded-full py-[11px] pl-11 pr-4 text-[15px] text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all font-medium' />

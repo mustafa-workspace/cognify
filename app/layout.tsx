@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Bodoni_Moda } from "next/font/google";
 import Navbar from "@/components/layout/navbarMobile";
 import NavbarDesk from "@/components/layout/navbar";
 import "@/styles/globals.css";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -10,12 +11,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-// const lora = Lora({
-//   variable: "--font-lora",
-//   display: "swap",
-//   subsets: ["latin"],
-//   weight: ["500"],
-// });
+const Bodoni = Bodoni_Moda({
+  variable:'--font-bodoni',
+  display:'swap',
+  subsets:['latin'],
+  weight:'500'
+});
+
+
 
 export const metadata: Metadata = {
   title: "Cognify",
@@ -30,12 +33,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} h-full antialiased`}
+      className={`${inter.className} ${Bodoni.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-100">
         <Navbar />
         <NavbarDesk />
-        {children}</body>
+        {children}
+        <Toaster/>
+        </body>
     </html>
   );
 }

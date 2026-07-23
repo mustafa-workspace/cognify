@@ -25,13 +25,13 @@ export const Feed = () => {
             {items?.map((feed: any) => (
                 <div
                     key={feed.id}
-                    className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 mb-6 transition-all duration-200"
+                    className="bg-white border border-gray-100 rounded-4xl p-6 md:p-8 mb-6 transition-all duration-200"
                 >
                     {/* Top Header Row */}
                     <div className="flex items-start justify-between gap-4 mb-5">
                         <div className="flex items-center gap-3">
                             {/* User Avatar */}
-                            <div className="relative flex-shrink-0 w-11 h-11">
+                            <div className="relative shrink-0 w-11 h-11">
                                 <Image
                                     src={'http://localhost:1337' + feed?.userinfo?.avatarImg?.url}
                                     alt={feed.userinfo.username || 'Profile'}
@@ -57,9 +57,9 @@ export const Feed = () => {
                         </div>
 
                         {/* Bookmark Action */}
-                        <button className=" text-slate-400 hover:text-slate-800 transition-colors border border-gray-100 rounded-full bg-slate-50/50 hover:bg-slate-50">
+                        <div className=" text-slate-400 hover:text-slate-800 transition-colors border border-gray-100 rounded-full bg-slate-50/50 hover:bg-slate-50">
                             <FeedsDropDown />
-                        </button>
+                        </div>
                     </div>
 
                     {/* Feed Title */}

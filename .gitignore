@@ -173,3 +173,5 @@ build
 .strapi-updater.json
 .strapi-cloud.json
 >>>>>>> 642917f3c434f8031295d2db37d4be5fb8ace198
+
+/lib/generated/prisma

@@ -5,7 +5,7 @@ export default function FeedProfile() {
             {/* User Avatar */}
             <div className="overlay-cover bg-linear-to-bl from-sidebar-cover via-sidebar-cover2 to-sidebar-cover3 w-full  h-37.5 sm:h-19 lg:h-33.75 absolute top-0 left-0 rounded-[25px]">
                 <div className="feed-profile-avatar overflow-hidden w-21.25 h-21.25 rounded-full border-4 border-white absolute -bottom-7.5 left-6">
-                    <Image src="/images/user/avatar/user.jpg" alt="Avatar" width={85} height={85} className="lg  w-full h-full object-cover" />
+                    <Image loading="eager" src="/images/user/avatar/user.jpg" alt="Avatar" width={85} height={85} className="lg  w-full h-full object-cover" />
                 </div>
             </div>
             {/* User Information */}
@@ -13,19 +13,19 @@ export default function FeedProfile() {
                 <div className="user-info px-2 ">
                     <div className="text-header flex justify-between items-center">
                         <span className="user-name xl:text-size-username lg:text-[16px] text-[14px] font-bold">Betsy Turner</span>
-                        <span className="user-location text-size-location">Cairo,Maadi</span>
+                        <span className="user-location text-size-location text-[#7b8190]">Cairo,Maadi</span>
                     </div>
-                    <div className="text-size-description  mt-0.5 flex items-center gap-1.5 text-gray-600">
-                        researcher in psychology and intellectual issues
+                    <div className="text-size-description mt-1 flex items-center gap-1.5 text-slate-400 font-medium leading-relaxed">
+                        Researcher in psychological and intellectual issues
                     </div>
                 </div>
-                <div className="user-details px-2 mt-4 flex justify-between">
-                    <span className="text-header text-[15px] font-medium">Daily Visitor</span>
-                    <span className="text-links font-semibold">568</span>
+                <div className="user-details px-2 mt-5 flex justify-between items-center">
+                    <span className="text-header text-[15px] font-medium text-slate-700">Daily Visitors</span>
+                    <span className="text-links font-semibold text-[#4A90E2]">450</span>
                 </div>
                 {/* Action Create */}
                 <hr className="border-t border-slate-200/60 my-4" />
-                <button className="w-full bg-links hover:bg-links-hover text-white py-3  px-4 rounded-[18px] font-semibold text-[15px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md hover:shadow-lg">
+                <button className="w-full bg-links hover:bg-links-hover text-white py-3 px-4 rounded-[18px] font-semibold text-[15px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md hover:shadow-lg">
                     <span className="text-lg font-bold max-sm-2xl:text-sm ">+</span> Create New Project
                 </button>
             </div>
