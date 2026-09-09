@@ -1,5 +1,4 @@
 'use client'; 
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -19,10 +18,13 @@ import { useRouter } from "next/navigation";
 import UserLoginSubmiting from "@/features/auth/services/getUser";
 import { toast } from "sonner";
 import { setAuthCookies } from "@/lib/cookies";
+import { useLoginMutation } from "@/redux/apis/AuthApi";
+// ------------------------------------------------------------------------------------------------------ // 
+
 export default function Signin() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-
+  const [login] = useLoginMutation();
   const {
     register,
     handleSubmit,
@@ -32,15 +34,24 @@ export default function Signin() {
     mode: 'onTouched'
   });
 
+  
+// CHECK FROM DATA 
     const onSubmit = async (data: LoginSchemaForm) => {
       try {
-        const result = await UserLoginSubmiting(data);
-        const token = result?.data.jwt
-        if (result && result.status === 200) {
+        const result = await login({
+          identifier: data.email,
+          password: data.password,
+        });
+
+        if ("data" in result && result.data?.jwt) {
+          const token = result.data.jwt;
           toast.success("Success.. Welcome back"); 
           setAuthCookies(token);
           router.push('/feed');
+        } else {
+          toast.error('Please check your Email & Password');
         }
+       
       } catch (error: any) {
         const errorMessage = error.response?.data?.error?.message || error.message || "An error occurred";
         toast.error(errorMessage);
@@ -48,6 +59,7 @@ export default function Signin() {
     };
 
   return (
+    
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white">
       {/* Left Side: Illustration / Brand Details */}
       <div className="hidden md:flex md:w-[45%] lg:w-[50%] flex-col justify-between p-12 bg-linear-to-tr from-[#e8f1fd] to-[#f4f8ff] relative overflow-hidden">
@@ -72,10 +84,9 @@ export default function Signin() {
           </div>
         </div>
       </div>
-
       {/* Right Side: Sign In Form */}
       <div className="w-full md:w-[55%] lg:w-[50%] flex flex-col justify-center items-center p-6 sm:p-12 md:p-16 lg:p-24 bg-white relative">
-        <div className="max-w-[420px] w-full flex flex-col">
+        <div className="max-w-105 w-full flex flex-col">
           {/* Back Button */}
           <div className="self-start">
             <button 

@@ -11,15 +11,15 @@ export default function FeedProfile() {
             {/* User Information */}
             <div className="feed-profile-info absolute bottom-3 left-0 right-0 px-6 pb-3 ">
                 <div className="user-info px-2 ">
-                    <div className="text-header flex justify-between items-center">
-                        <span className="user-name xl:text-size-username lg:text-[16px] text-[14px] font-bold">Betsy Turner</span>
-                        <span className="user-location text-size-location text-[#7b8190]">Cairo,Maadi</span>
+                    <div className="text-header flex justify-between items-center ">
+                        <span className="user-name p-0 xl:text-size-username lg:text-[16px] text-[14px] font-bold">Betsy Turner</span>
+                        <span className="user-location  text-size-location text-[#7b8190]">Cairo,Maadi</span>
                     </div>
-                    <div className="text-size-description mt-1 flex items-center gap-1.5 text-slate-400 font-medium leading-relaxed">
+                    <div className="text-size-description text-slate-400 font-medium">
                         Researcher in psychological and intellectual issues
                     </div>
                 </div>
-                <div className="user-details px-2 mt-5 flex justify-between items-center">
+                <div className="user-details px-2 mt-3 flex justify-between items-center">
                     <span className="text-header text-[15px] font-medium text-slate-700">Daily Visitors</span>
                     <span className="text-links font-semibold text-[#4A90E2]">450</span>
                 </div>

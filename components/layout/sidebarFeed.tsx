@@ -1,7 +1,7 @@
-import FeedProfile from "@/features/Feeds/Sidebar/components/feedProfile";
-import SidebarFeedLinks from "@/features/Feeds/Sidebar/components/SidebarFeedLinks";
-import SidebarFeedStats from "@/features/Feeds/Sidebar/components/SidebarFeedStats";
-import SidebarFeedPromo from "@/features/Feeds/Sidebar/components/SidebarFeedPromo";
+import FeedProfile from "@/components/Sidebar/components/feedProfile";
+import SidebarFeedLinks from "@/components/Sidebar/components/SidebarFeedLinks";
+import SidebarFeedStats from "@/components/Sidebar/components/SidebarFeedStats";
+import SidebarFeedPromo from "@/components/Sidebar/components/SidebarFeedPromo";
 
 export default function leftSidebar() {
     return (

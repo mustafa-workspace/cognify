@@ -3,7 +3,7 @@ import { Inter,Bodoni_Moda } from "next/font/google";
 import Navbar from "@/components/layout/navbarMobile";
 import NavbarDesk from "@/components/layout/navbar";
 import "@/styles/globals.css";
-import { Toaster } from "sonner";
+import ReactReduxProvider from "@/redux/provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,8 +38,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-gray-100">
         <Navbar />
         <NavbarDesk />
-        {children}
-        <Toaster/>
+        <ReactReduxProvider>
+           {children}
+        </ReactReduxProvider>
         </body>
     </html>
   );
