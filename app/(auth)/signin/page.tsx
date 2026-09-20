@@ -45,6 +45,7 @@ export default function Signin() {
 
         if ("data" in result && result.data?.jwt) {
           const token = result.data.jwt;
+          console.log(token);
           toast.success("Success.. Welcome back"); 
           setAuthCookies(token);
           router.push('/feed');

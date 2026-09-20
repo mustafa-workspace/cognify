@@ -1,5 +1,5 @@
 import { api } from "../baseApi"
-import { ApiResponse } from "@/types/AuthTypes";
+import { ApiResponse, User } from "@/types/AuthTypes";
 
 export const authApi = api.injectEndpoints({
     endpoints:builder => ({
@@ -24,13 +24,30 @@ export const authApi = api.injectEndpoints({
         }),
 
          // Get current logged-in user
-        getMe: builder.query<User, void>({
+      getMe: builder.query<User, void>({
         query: () => ({
-            url: "/api/users/me",
+            url: "/api/users/me?populate=*",
             method: "GET",
         }),
         providesTags: ["Auth"],
-        }),
+      }),
+
+    //   logout: builder.mutation<void, void>({
+    //   query: () => ({
+    //     url: '/auth/logout',
+    //     method: 'POST',
+    //   }),
+    //   // تنظيف الكاش الخاص ببيانات المستخدم بعد الخروج
+    //   async onQueryStarted(_, { dispatch, queryFulfilled }) {
+    //     try {
+    //       await queryFulfilled;
+    //       // إعادة ضبط كاش الـ API بالكامل
+    //       dispatch(api.util.resetApiState());
+    //     } catch (error) {
+    //       console.error('Logout failed on server:', error);
+    //     }
+    //   },
+    // }),
     })
 });
 

@@ -52,3 +52,36 @@ body {
     scrollbar-width: thin;
     scrollbar-color: rgba(156, 163, 175, 0.25) transparent;
 }
+
+/* Smooth Top-to-Down Expand & Cascade Animations */
+@keyframes slideDownFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-18px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-slide-down {
+    animation: slideDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-cascade-1 {
+    opacity: 0;
+    animation: slideDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+}
+.animate-cascade-2 {
+    opacity: 0;
+    animation: slideDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+}
+.animate-cascade-3 {
+    opacity: 0;
+    animation: slideDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.19s forwards;
+}
+.animate-cascade-4 {
+    opacity: 0;
+    animation: slideDownFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.26s forwards;
+}

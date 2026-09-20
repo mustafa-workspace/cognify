@@ -36,9 +36,9 @@ export default function RootLayout({
       className={`${inter.className} ${Bodoni.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-100">
-        <Navbar />
-        <NavbarDesk />
         <ReactReduxProvider>
+          <Navbar />
+          <NavbarDesk />
            {children}
         </ReactReduxProvider>
         </body>

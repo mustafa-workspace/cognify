@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -12,8 +11,8 @@ import { Bookmark, Search, PlusCircle, Library } from "lucide-react";
 export function FeedsDropDown() {
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger>
-                <div variant="ghost" size="icon" className="cursor-pointer">
+            <DropdownMenuTrigger >
+                <div     className="cursor-pointer">
                     <Bookmark className="w-[20px] h-[20px] text-slate-600" strokeWidth={1.8} />
                 </div>
             </DropdownMenuTrigger>
